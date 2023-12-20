@@ -23,4 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-
+# map(css/scss)
+*.css.map
+*.scss.map
+*.css
