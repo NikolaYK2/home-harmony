@@ -1,5 +1,46 @@
-.a {
-  width: 100px;
+.header {
+  height: 120px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.header .logo > a {
+  color: var(--color-darck-900);
+  font-size: var(--font-size-25);
+}
+.header .logo > a:hover svg path:nth-child(1) {
+  fill: #56676f;
+  transition: fill 0.3s ease 0s;
+}
+.header .logo > a:hover svg path:nth-child(2) {
+  fill: #aa8a71;
+  transition: fill 0.3s ease 0s;
+}
+.header .pages {
+  display: flex;
+}
+.header .pages .page {
+  position: relative;
+  padding: 5px 10px;
+}
+.header .pages .page:hover:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  animation: pageDecor 0.5s ease 0s forwards;
+}
+
+@keyframes pageDecor {
+  100% {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=Header.module.css.map */
