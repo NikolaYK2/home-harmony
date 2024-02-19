@@ -1,3 +1,5 @@
+
+
 #root{
   height: 100%;
 }
@@ -62,11 +64,13 @@ body {* {
     color: var(--color-darck-900);
     text-size-adjust: 100%;
 
-    background-color: var(--color-grey-300);
-
+    //background-color: var(--color-light-300);
+    background:url("@/assets/img/bcApp/bcApp.jpg") center center/cover no-repeat fixed;
+    overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
 
   input,
   button,

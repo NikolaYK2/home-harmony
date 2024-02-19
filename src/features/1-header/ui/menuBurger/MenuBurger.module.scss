@@ -1,0 +1,74 @@
+.containerBurger {
+
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 10px;
+  cursor: pointer;
+
+  overflow: hidden;
+  @media (max-width: 700px) {
+    display: flex;
+  }
+
+
+  &:hover {
+    .decor:first-child {
+      transform: translateX(25%);
+      transition: all .3s ease-in-out 0s;
+    }
+
+    .decor:last-child {
+      transform: translateX(-45px);
+      transition: all .5s ease-in-out 0s;
+    }
+  }
+
+
+  .decor {
+    //position: absolute;
+    height: 2px;
+    display: flex;
+
+    &:first-child {
+      top: 0;
+      left: 0;
+      transition: all .3s ease-in-out 0s;
+
+      &:after {
+        display: block;
+        content: '';
+        width: 25px;
+        border-top: 1px solid black;
+
+      }
+
+    }
+
+    &:last-child {
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      transition: all .5s ease-in-out 0s;
+
+      &:after {
+        display: block;
+        content: '';
+        width: 40px;
+        border-bottom: 1px solid black;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        width: 40px;
+        border-bottom: 1px solid black;
+        margin: 0 20px 0 0;
+
+      }
+    }
+  }
+}

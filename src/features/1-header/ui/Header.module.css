@@ -24,23 +24,22 @@
 .header .pages .page {
   position: relative;
   padding: 5px 10px;
+  white-space: nowrap;
 }
-.header .pages .page:hover:after {
+.header .pages .page:after {
   position: absolute;
   content: "";
   display: block;
   top: 50%;
   right: 0;
   width: 0;
-  height: 1px;
+  height: 0.5px;
   background: black;
-  animation: pageDecor 0.5s ease 0s forwards;
+  transition: width 0.3s ease-in-out 0s;
 }
-
-@keyframes pageDecor {
-  100% {
-    width: 50%;
-  }
+.header .pages .page:hover:after {
+  width: 60%;
+  transition: width 0.3s ease-in-out 0s;
 }
 
 /*# sourceMappingURL=Header.module.css.map */

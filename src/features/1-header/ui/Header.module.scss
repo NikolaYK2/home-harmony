@@ -7,10 +7,11 @@
   padding: 0 50px;
 
   .logo {
-    >a{
+    > a {
       color: var(--color-darck-900);
       font-size: var(--font-size-25);
     }
+
     //width: 110px;
     //height: 110px;
 
@@ -55,23 +56,25 @@
     .page {
       position: relative;
       padding: 5px 10px;
+      white-space: nowrap;
 
-      &:hover:after {
+      &:after {
         position: absolute;
         content: '';
         display: block;
         top: 50%;
         right: 0;
         width: 0;
-        height: 1px;
+        height: 0.5px;
         background: black;
-        animation: pageDecor .5s ease 0s forwards;
+        transition: width .3s ease-in-out 0s;
+      }
+
+      &:hover:after {
+        width: 60%;
+        transition: width .3s ease-in-out 0s;
       }
     }
   }
 }
 
-@keyframes pageDecor {
-  0%{}
-  100%{width: 50%}
-}
