@@ -1,8 +1,8 @@
 import s from './Header.module.scss'
-// import logo from '@/assets/img/logo/logo.png'
-import {Button} from "@/comon/components/Button.tsx";
 import {MenuBurger} from "@/features/1-header/ui/menuBurger/MenuBurger.tsx";
 import {useState} from "react";
+import {Messenger} from "@/comon/components/messenger/Messenger.tsx";
+import {Button} from "@/comon/components/btnPoly/Button.tsx";
 
 type TypeArr = {
   id: string,
@@ -14,8 +14,7 @@ const navigation: TypeArr[] = [
   {id: '3', name: 'ROOM'},
 ]
 export const Header = () => {
-
-  const [switchNav, setSwitchNav] = useState(true)
+  const [switchNav, setSwitchNav] = useState(false)
 
   return (
     <header className={s.header}>
@@ -26,18 +25,25 @@ export const Header = () => {
         </Button>
       </div>
 
-      <nav className={`${s.nav} ${switchNav ? s.navActive : ''}`}>
-        <ul>
-          {navigation.map(page => <li key={page.id} className={s.page}>
-              <Button as={'a'} href={''} variant={'link'}>
-                {page.name}
-              </Button>
-            </li>
-          )}
-        </ul>
+      <nav className={`${s.nav}`} onClick={() => {setSwitchNav(false)}}>
+
+        <div className={`${s.blockUl} ${switchNav ? s.navActive : ''}`} onClick={(event) => event.stopPropagation()}>
+          <ul>
+            {navigation.map(page => <li key={page.id}>
+                <Button as={'a'} href={''} variant={'link'}>
+                  {page.name}
+                </Button>
+              </li>
+            )}
+          </ul>
+
+          {switchNav && <Messenger/>}
+
+        </div>
       </nav>
 
       <MenuBurger switchNav={switchNav} setSwitchNav={setSwitchNav}/>
+
     </header>
   );
 };

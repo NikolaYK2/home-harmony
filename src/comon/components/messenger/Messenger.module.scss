@@ -1,0 +1,15 @@
+.messengers {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > a {
+    display: inline-flex;
+    color: var(--color-light-300);
+
+    &:after {
+      background: var(--color-light-300);
+    }
+  }
+}

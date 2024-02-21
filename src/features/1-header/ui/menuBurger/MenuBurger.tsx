@@ -1,5 +1,5 @@
 import s from './MenuBurger.module.scss'
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 
 
 type Props={
@@ -15,12 +15,8 @@ export const MenuBurger = ({switchNav, setSwitchNav}:Props) => {
 
   useEffect(() => {
     if (switchNav) {
-      // setModNav(s.navOff)
-      // setModBurger(s.menuBurger)
       document.body.style.overflow = "unset"
     } else {
-      // setModNav(s.activeNav)
-      // setModBurger(s.activeBurger)
       document.body.style.overflow = "hidden"
     }
   }, [switchNav])
