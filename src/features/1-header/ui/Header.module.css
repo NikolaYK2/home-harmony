@@ -74,6 +74,12 @@
   display: flex;
   align-self: center;
 }
+.header .nav .blockUl .messengers {
+  color: var(--color-light-300);
+}
+.header .nav .blockUl .messengers:after {
+  background: var(--color-light-300);
+}
 .header .nav .navActive {
   right: 0;
   transition: all 1s cubic-bezier(0.9, 1, 0.175, 1);

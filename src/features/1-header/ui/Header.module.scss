@@ -84,7 +84,13 @@
       > ul {
         display: flex;
         align-self: center;
+      }
 
+       .messengers {
+        color: var(--color-light-300);
+         &:after {
+           background: var(--color-light-300);
+         }
       }
     }
 
@@ -98,7 +104,6 @@
     }
 
   }
-
-
 }
+
 

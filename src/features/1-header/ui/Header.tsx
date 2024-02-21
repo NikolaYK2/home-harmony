@@ -14,6 +14,7 @@ const navigation: TypeArr[] = [
   {id: '3', name: 'ROOM'},
 ]
 export const Header = () => {
+
   const [switchNav, setSwitchNav] = useState(false)
 
   return (
@@ -37,7 +38,7 @@ export const Header = () => {
             )}
           </ul>
 
-          {switchNav && <Messenger/>}
+          {switchNav && <Messenger className={s.messengers}/>}
 
         </div>
       </nav>
