@@ -26,9 +26,9 @@ export const Header = () => {
         </Button>
       </div>
 
-      <nav className={`${s.nav}`} onClick={() => {setSwitchNav(false)}}>
+      <nav className={`${s.nav} ${switchNav && s.navActive}`} onClick={() => {setSwitchNav(false)}}>
 
-        <div className={`${s.blockUl} ${switchNav ? s.navActive : ''}`} onClick={(event) => event.stopPropagation()}>
+        <div className={`${s.blockUl} ${switchNav && s.blockUlActive}`} onClick={(event) => event.stopPropagation()}>
           <ul>
             {navigation.map(page => <li key={page.id}>
                 <Button as={'a'} href={''} variant={'link'}>
