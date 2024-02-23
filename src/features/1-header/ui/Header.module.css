@@ -1,3 +1,13 @@
+:root .appContainer {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 5.271%;
+}
+
 .header {
   height: 120px;
   display: flex;

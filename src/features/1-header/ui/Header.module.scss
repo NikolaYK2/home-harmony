@@ -1,10 +1,12 @@
+@import "../../../assets/styles/styleGlobal";
+
 .header {
   height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5.271%;
-  @media (max-width: 700px) {
+  @media (max-width: $mobileBreakpoint) {
     height: 50px;
   }
 
@@ -37,7 +39,7 @@
     .blockUl {
       z-index: 2;
       color: var(--color-darck-900);
-      @media (max-width: 700px) {
+      @media (max-width: $mobileBreakpoint) {
         position: absolute;
         top: 50px;
         right: -250%;
@@ -77,11 +79,12 @@
         align-self: center;
       }
 
-       .messengers {
+      .messengers {
         color: var(--color-light-300);
-         &:after {
-           background: var(--color-light-300);
-         }
+
+        &:after {
+          background: var(--color-light-300);
+        }
       }
     }
 
@@ -95,7 +98,8 @@
     }
 
   }
-  .navActive{
+
+  .navActive {
     position: absolute;
     top: 0;
     left: 0;
