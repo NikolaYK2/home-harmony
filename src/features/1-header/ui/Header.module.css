@@ -49,6 +49,13 @@
   z-index: 2;
   color: var(--color-darck-900);
 }
+.header .nav .items .messengers {
+  display: none;
+  color: var(--color-light-300);
+}
+.header .nav .items .messengers:after {
+  background: var(--color-light-300);
+}
 @media (max-width: 700px) {
   .header .nav .items {
     display: flex;
@@ -83,16 +90,13 @@
   .header .nav .items > ul > li > a:after {
     background: var(--color-light-300);
   }
+  .header .nav .items .messengers {
+    display: block;
+  }
 }
 .header .nav .items > ul {
   display: flex;
   align-self: center;
-}
-.header .nav .items .messengers {
-  color: var(--color-light-300);
-}
-.header .nav .items .messengers:after {
-  background: var(--color-light-300);
 }
 .header .nav .itemsActive {
   right: 0;

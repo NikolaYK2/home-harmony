@@ -53,6 +53,15 @@
     .items {
       z-index: 2;
       color: var(--color-darck-900);
+      .messengers {
+        display: none;
+        color: var(--color-light-300);
+
+        &:after {
+          background: var(--color-light-300);
+        }
+      }
+
       @media (max-width: $mobileBreakpoint) {
         display: flex;
         position: absolute;
@@ -92,6 +101,10 @@
             }
           }
         }
+        .messengers{
+          display: block;
+        }
+
       }
 
       > ul {
@@ -99,13 +112,6 @@
         align-self: center;
       }
 
-      .messengers {
-        color: var(--color-light-300);
-
-        &:after {
-          background: var(--color-light-300);
-        }
-      }
     }
 
     .itemsActive {
