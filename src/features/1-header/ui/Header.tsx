@@ -19,32 +19,34 @@ export const Header = () => {
 
   return (
     <header className={s.header}>
+      <div className={s.containerHeader}>
 
-      <div className={s.logo}>
-        <Button as={'a'} href={''}>
-          HOME HARMONY
-        </Button>
-      </div>
-
-      <nav className={`${s.nav} ${switchNav && s.navActive}`} onClick={() => {setSwitchNav(false)}}>
-
-        <div className={`${s.blockUl} ${switchNav && s.blockUlActive}`} onClick={(event) => event.stopPropagation()}>
-          <ul>
-            {navigation.map(page => <li key={page.id}>
-                <Button as={'a'} href={''} variant={'link'}>
-                  {page.name}
-                </Button>
-              </li>
-            )}
-          </ul>
-
-          {switchNav && <Messenger className={s.messengers}/>}
-
+        <div className={s.logo}>
+          <Button as={'a'} href={''}>
+            HOME HARMONY
+          </Button>
         </div>
-      </nav>
 
-      <MenuBurger switchNav={switchNav} setSwitchNav={setSwitchNav}/>
+        <nav className={`${s.nav} ${switchNav && s.navActive}`} onClick={() => {setSwitchNav(false)}}>
 
+          <div className={`${s.items} ${switchNav && s.itemsActive}`} onClick={(event) => event.stopPropagation()}>
+            <ul>
+              {navigation.map(page => <li key={page.id}>
+                  <Button as={'a'} href={''} variant={'link'}>
+                    {page.name}
+                  </Button>
+                </li>
+              )}
+            </ul>
+
+           <Messenger className={s.messengers}/>
+
+          </div>
+        </nav>
+
+        <MenuBurger switchNav={switchNav} setSwitchNav={setSwitchNav}/>
+
+      </div>
     </header>
   );
 };

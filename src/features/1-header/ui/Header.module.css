@@ -9,16 +9,23 @@
 }
 
 .header {
-  height: 120px;
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+}
+.header .containerHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 50px;
   padding: 0 5.271%;
-}
-@media (max-width: 700px) {
-  .header {
-    height: 50px;
-  }
+  z-index: 1;
+  background: #f3f5ea;
+  box-shadow: 0 1px 5px #f3f5ea;
 }
 .header .logo > a {
   color: var(--color-darck-900);
@@ -32,69 +39,75 @@
   fill: #aa8a71;
   transition: fill 0.3s ease 0s;
 }
-.header .nav .blockUl {
+.header .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.header .nav .items {
   z-index: 2;
   color: var(--color-darck-900);
 }
 @media (max-width: 700px) {
-  .header .nav .blockUl {
+  .header .nav .items {
+    display: flex;
     position: absolute;
     top: 50px;
-    right: -250%;
+    right: -100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     background: var(--color-darck-900);
-    box-shadow: inset 0 3px 3px var(--color-light-300);
+    box-shadow: inset 0 1px 3px var(--color-light-300);
     max-width: 200px;
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100vh - 50px);
     transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow: auto;
   }
-  .header .nav .blockUl .page {
+  .header .nav .items .page {
     color: var(--color-light-300);
   }
-  .header .nav .blockUl .page:hover:after, .header .nav .blockUl .page:after {
+  .header .nav .items .page:hover:after, .header .nav .items .page:after {
     background: var(--color-light-300);
   }
-  .header .nav .blockUl > ul {
+  .header .nav .items > ul {
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  .header .nav .blockUl > ul > li > a {
+  .header .nav .items > ul > li > a {
     color: var(--color-light-300);
   }
-  .header .nav .blockUl > ul > li > a:after {
+  .header .nav .items > ul > li > a:after {
     background: var(--color-light-300);
   }
 }
-.header .nav .blockUl > ul {
+.header .nav .items > ul {
   display: flex;
   align-self: center;
 }
-.header .nav .blockUl .messengers {
+.header .nav .items .messengers {
   color: var(--color-light-300);
 }
-.header .nav .blockUl .messengers:after {
+.header .nav .items .messengers:after {
   background: var(--color-light-300);
 }
-.header .nav .blockUlActive {
+.header .nav .itemsActive {
   right: 0;
-  transition: all 1s cubic-bezier(0.9, 1, 0.175, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 35px 15px;
+  transition: all 1s cubic-bezier(0.9, 1, 0.175, 1);
 }
 .header .navActive {
   position: absolute;
   top: 0;
   left: 0;
-  background: transparent;
-  height: 100%;
   width: 100%;
-  z-index: 0;
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=Header.module.css.map */

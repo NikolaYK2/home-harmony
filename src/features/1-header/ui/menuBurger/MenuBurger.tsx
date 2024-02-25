@@ -14,7 +14,7 @@ export const MenuBurger = ({switchNav, setSwitchNav}:Props) => {
   }
 
   useEffect(() => {
-    if (switchNav) {
+    if (!switchNav) {
       document.body.style.overflow = "unset"
     } else {
       document.body.style.overflow = "hidden"
