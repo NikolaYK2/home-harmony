@@ -15,7 +15,9 @@ export const Main = () => {
         {items.map(el => <div key={el.id} className={s.item}>
           <div className={s.img}>
             <img src={el.img[0]} alt={'img'}/>
+
             <Button as={'a'} href={''} variant={'link'}>select options</Button>
+
             <div className={s.options}>
               <IconSvg name={'like'}/>
             </div>

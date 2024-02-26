@@ -10,6 +10,7 @@ type ItemMainType = {
   description: string,
   category: string,
   price: string,
+  sale: boolean,
 }
 type InitialStateType = {
   items: ItemMainType[]
@@ -23,6 +24,7 @@ const initialState: InitialStateType = {
       description: 'Nice chair, to by, not pass',
       category: 'chairs',
       price: '49.99',
+      sale: false,
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ const initialState: InitialStateType = {
       description: 'Table a big, nice and cool, the good table if not by else go out',
       category: 'tables',
       price: '149.99',
+      sale: false,
     },
     {
       id: 3,
@@ -45,28 +48,31 @@ const initialState: InitialStateType = {
       description: 'Staying at home on sofa and you not sick never',
       category: 'sofa',
       price: '549.99',
+      sale: false,
     },
     {
       id: 4,
       title: 'Lamp',
       img: [
         'https://i1.adis.ws/i/fv/PRODZFRSP000000000046363_elon-stacked-table-lamp_light__lifestyle?$large$&w=689&fmt=webp&fmt=webp',
-      'https://i1.adis.ws/i/fv/PRODZFRSP000000000046363_elon-stacked-table-lamp_light_champagne-gold?$product$&w=1981.5&fmt=webp'
+        'https://i1.adis.ws/i/fv/PRODZFRSP000000000046363_elon-stacked-table-lamp_light_champagne-gold?$product$&w=1981.5&fmt=webp'
       ],
       description: 'On lamp and see us, off lamp the bad',
       category: 'lighting',
       price: '549.99',
+      sale: false,
     },
     {
       id: 5,
       title: 'Chair white',
       img: [
         'https://i1.adis.ws/i/fv/PRODAVLNCHPR--001_avellino_dining-chairs-pair__lifestyle?$large$&w=689&fmt=webp&fmt=webp',
-      'https://i1.adis.ws/i/fv/PRODAVLNCHPR--001_avellino_dining-chairs-pair?$product$&w=1981.5&fmt=webp'
+        'https://i1.adis.ws/i/fv/PRODAVLNCHPR--001_avellino_dining-chairs-pair?$product$&w=1981.5&fmt=webp'
       ],
       description: 'Chair white so nice also sun',
       category: 'sofa',
       price: '549.99',
+      sale: false,
     },
   ]
 }
