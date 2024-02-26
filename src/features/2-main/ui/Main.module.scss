@@ -70,7 +70,7 @@
         z-index: 1;
       }
 
-      &:hover > a{
+      &:hover > a {
         visibility: visible;
         opacity: 1;
         transition: visibility .4s ease 0s, opacity .4s ease 0s;
@@ -80,12 +80,24 @@
       .options {
         position: absolute;
         bottom: -100%;
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         visibility: hidden;
         opacity: 0;
         transition: all .5s ease 0s;
         z-index: 1;
+
+        > svg path {
+          fill: var(--color-darck-900);
+          transition: fill .3s ease 0s;
+        }
+
+        &:hover {
+          > svg path {
+            fill: var(--color-medium-900);
+            transition: fill .3s ease 0s;
+          }
+        }
       }
 
       &:hover .options {
@@ -93,7 +105,6 @@
         visibility: visible;
         opacity: 1;
         transition: all .5s ease 0s;
-        z-index: 1;
       }
 
 
