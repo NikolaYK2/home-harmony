@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import chair from '@/assets/img/item/chairs/chair-grey.jpg'
 import chairInt from '@/assets/img/item/chairs/chair-grey-inter.jpg'
+import {createAppAsyncThunk} from "@/app/lib/createAppAsyncThunk.ts";
 
 
 export type ItemsType = {
@@ -94,7 +95,28 @@ const slice = createSlice({
       }
     }
   },
+  extraReducers: (builder) => {
+    builder.addCase(chooseFavoriteProductTC.fulfilled, (state, action)=>{
+        const item = state.items.find(el => el.id === action.payload.itemId);
+        if (item) {
+          item.favorite = !item.favorite;
+        }
+    })
+  }
 })
 
+const chooseFavoriteProductTC = createAppAsyncThunk<{ itemId: number }, number>
+('items/chooseFavorite', (itemId: number, {rejectWithValue}) => {
+  // dispatch(itemsActions.chooseFavoriteProduct({itemId}))
+  try {
+    return {itemId}
+  } catch (e) {
+    return rejectWithValue(null)
+  }
+})
+// const chooseFavoriteProductTC = createAppAsyncThunk('items/chooseFavorite', (itemId: number, {dispatch}) => {
+//   dispatch(itemsActions.chooseFavoriteProduct({itemId}))
+// })
 export const itemsReducer = slice.reducer
 export const itemsActions = slice.actions
+export const itemsThunk = {chooseFavoriteProductTC}

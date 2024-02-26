@@ -1,7 +1,7 @@
 import {Button} from "@/comon/components/btnPoly/Button.tsx";
 import {IconSvg} from "@/comon/components/IconSVG/IconSvg.tsx";
 import s from './Item.module.scss'
-import {itemsActions, ItemsType} from "@/features/2-main/products/model/itemsReducer.ts";
+import {itemsThunk, ItemsType} from "@/features/2-main/products/model/itemsReducer.ts";
 import {useAppDispatch} from "@/app/lib/hooks.ts";
 
 type Props = {
@@ -21,7 +21,7 @@ const dispatch = useAppDispatch();
         <Button as={'a'} href={''} variant={'link'}>select options</Button>
 
         <div className={`${s.options} ${items.favorite &&  s.activeOptions}`}
-             onClick={()=>dispatch(itemsActions.chooseFavoriteProduct({itemId: items.id}))}>
+             onClick={()=>dispatch(itemsThunk.chooseFavoriteProductTC(items.id))}>
           <IconSvg name={'like'}/>
         </div>
       </div>
