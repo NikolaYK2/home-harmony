@@ -10,7 +10,7 @@ export const Messenger = ({className}:Props) => {
 
   return (
     <div className={s.messengers}>
-      {messengers.map(el=><Button as={'a'} className={className} href={el.link} variant={'link'}>{el.name}</Button>)}
+      {messengers.map(el=><Button key={el.name} as={'a'} className={className} href={el.link} variant={'link'}>{el.name}</Button>)}
     </div>
   );
 };
