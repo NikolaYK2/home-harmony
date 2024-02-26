@@ -1,0 +1,128 @@
+.item {
+  flex: 1 1 33%;
+  min-width: 240px;
+  //max-width: 250px;
+  padding: 0 10px;
+  margin: 0 0 10px;
+  width: 100%;
+  //border: 1px solid red;
+
+  .img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 112% 0;
+    transition: background 1s ease 0s;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      transition: background .4s ease .1s;
+    }
+
+    &:hover:after {
+      background: var(--color-medium-opaciti);
+      transition: background .4s ease .1s;
+    }
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    > a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      max-width: 150px;
+      height: 10%;
+      transform: translateY(-50%);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .4s ease 0s, opacity .4s ease 0s;
+      z-index: 1;
+    }
+
+    &:hover > a {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility .4s ease 0s, opacity .4s ease 0s;
+    }
+
+
+    .options {
+      position: absolute;
+      bottom: -100%;
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .5s ease 0s;
+      z-index: 1;
+
+      > svg path {
+        fill: var(--color-darck-900);
+        transition: fill .3s ease 0s;
+      }
+
+      &:hover {
+        > svg path {
+          fill: var(--color-medium-900);
+          transition: fill .3s ease 0s;
+        }
+      }
+    }
+
+    &:hover .options {
+      bottom: 15px;
+      visibility: visible;
+      opacity: 1;
+      transition: all .5s ease 0s;
+    }
+
+
+  }
+
+  .data {
+    margin: 7% 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > div {
+      display: flex;
+      width: 100%;
+      margin: 0 0 3% 0;
+      justify-content: space-between;
+
+      > h2 {
+        text-transform: uppercase;
+      }
+
+      > p {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .description {
+      color: var(--color-light-900);
+    }
+  }
+}

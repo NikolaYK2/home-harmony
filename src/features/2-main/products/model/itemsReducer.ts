@@ -3,7 +3,7 @@ import chair from '@/assets/img/item/chairs/chair-grey.jpg'
 import chairInt from '@/assets/img/item/chairs/chair-grey-inter.jpg'
 
 
-type ItemMainType = {
+export type ItemsType = {
   id: number,
   title: string,
   img: string[],
@@ -13,7 +13,7 @@ type ItemMainType = {
   sale: boolean,
 }
 type InitialStateType = {
-  items: ItemMainType[]
+  items: ItemsType[]
 }
 const initialState: InitialStateType = {
   items: [
@@ -77,11 +77,19 @@ const initialState: InitialStateType = {
   ]
 }
 
+// const choesFavoriteProduct = createAppAsyncThunk
+
+
+
+
 const slice = createSlice({
-  name: 'mainItems',
+  name: 'items',
   initialState: initialState,
-  reducers: {
+  reducers:{
   }
+  // extraReducers:(builder)=>{
+  //
+  // }
 })
 
-export const mainReducer = slice.reducer
+export const itemsReducer = slice.reducer

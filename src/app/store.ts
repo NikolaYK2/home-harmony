@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {mainReducer} from "@/features/2-main/model/mainReducer.ts";
+import {itemsReducer} from "@/features/2-main/products/model/itemsReducer.ts";
 
 export const store = configureStore({
   reducer: {
-    main: mainReducer
+    productions: itemsReducer
   },
 })
 
