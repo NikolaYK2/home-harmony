@@ -80,7 +80,8 @@ const initialState: InitialStateType = {
 const slice = createSlice({
   name: 'mainItems',
   initialState: initialState,
-  reducers: {}
+  reducers: {
+  }
 })
 
 export const mainReducer = slice.reducer
