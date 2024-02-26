@@ -87,6 +87,12 @@
         }
       }
     }
+    .activeOptions{
+      >svg path,
+      &:hover>svg path{
+        fill: red;
+      }
+    }
 
     &:hover .options {
       bottom: 15px;

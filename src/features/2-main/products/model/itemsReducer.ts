@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import chair from '@/assets/img/item/chairs/chair-grey.jpg'
 import chairInt from '@/assets/img/item/chairs/chair-grey-inter.jpg'
 
@@ -11,6 +11,7 @@ export type ItemsType = {
   category: string,
   price: string,
   sale: boolean,
+  favorite: boolean,
 }
 type InitialStateType = {
   items: ItemsType[]
@@ -25,6 +26,7 @@ const initialState: InitialStateType = {
       category: 'chairs',
       price: '49.99',
       sale: false,
+      favorite: false,
     },
     {
       id: 2,
@@ -37,6 +39,7 @@ const initialState: InitialStateType = {
       category: 'tables',
       price: '149.99',
       sale: false,
+      favorite: false,
     },
     {
       id: 3,
@@ -49,6 +52,7 @@ const initialState: InitialStateType = {
       category: 'sofa',
       price: '549.99',
       sale: false,
+      favorite: false,
     },
     {
       id: 4,
@@ -61,6 +65,7 @@ const initialState: InitialStateType = {
       category: 'lighting',
       price: '549.99',
       sale: false,
+      favorite: false,
     },
     {
       id: 5,
@@ -73,23 +78,23 @@ const initialState: InitialStateType = {
       category: 'sofa',
       price: '549.99',
       sale: false,
+      favorite: false,
     },
   ]
 }
 
-// const choesFavoriteProduct = createAppAsyncThunk
-
-
-
-
 const slice = createSlice({
   name: 'items',
   initialState: initialState,
-  reducers:{
-  }
-  // extraReducers:(builder)=>{
-  //
-  // }
+  reducers: {
+    chooseFavoriteProduct: (state, action: PayloadAction<{ itemId: number }>) => {
+      const item = state.items.find(el => el.id === action.payload.itemId);
+      if (item) {
+        item.favorite = !item.favorite;
+      }
+    }
+  },
 })
 
 export const itemsReducer = slice.reducer
+export const itemsActions = slice.actions
