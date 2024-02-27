@@ -1,5 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import chair from '@/assets/img/item/chairs/chair-grey.jpg'
+import chair1 from '@/assets/img/item/chairs/chair-grey1.jpg'
+import chair2 from '@/assets/img/item/chairs/chair-grey2.jpg'
+import chair3 from '@/assets/img/item/chairs/chair-grey3.jpg'
 import chairInt from '@/assets/img/item/chairs/chair-grey-inter.jpg'
 import {createAppAsyncThunk} from "@/app/lib/createAppAsyncThunk.ts";
 
@@ -22,7 +24,13 @@ const initialState: InitialStateType = {
     {
       id: 1,
       title: 'Chair grey',
-      img: [chairInt, chair,],
+      img: [
+        chairInt,
+        chair1,
+        chair2,
+        chair3,
+
+      ],
       description: 'Nice chair, to by, not pass',
       category: 'chairs',
       price: '49.99',

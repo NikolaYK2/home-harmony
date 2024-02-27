@@ -14,7 +14,6 @@
     align-items: center;
     padding: 0 0 112% 0;
     transition: background 1s ease 0s;
-    cursor: pointer;
     overflow: hidden;
 
     &:after {
@@ -73,6 +72,7 @@
       visibility: hidden;
       opacity: 0;
       transition: all .5s ease 0s;
+      cursor: pointer;
       z-index: 1;
 
       > svg path {
