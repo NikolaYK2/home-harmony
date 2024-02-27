@@ -19,7 +19,7 @@ const dispatch = useAppDispatch();
       <div className={s.img}>
         <img src={items.img[0]} alt={'img'}/>
 
-        <Button as={Link} to={`/item/${items.id}`} variant={'link'}>select options</Button>
+        <Button as={Link} to={`item/${items.id}`} variant={'link'}>select options</Button>
 
         <div className={`${s.options} ${items.favorite &&  s.activeOptions}`}
              onClick={()=>dispatch(itemsThunk.chooseFavoriteProductTC(items.id))}>
@@ -29,7 +29,7 @@ const dispatch = useAppDispatch();
 
       <div className={s.data}>
         <div>
-          <Link to={`/item/${items.id}`}>
+          <Link to={`item/${items.id}`}>
             {items.title}
           </Link>
           <p>

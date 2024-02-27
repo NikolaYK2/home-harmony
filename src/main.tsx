@@ -7,10 +7,11 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Main} from "@/features/2-main/Main.tsx";
 import {DetailItem} from "@/features/2-main/products/ui/detailItem/DetailItem.tsx";
 
+export const baseUrl = "/home-harmony/";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: baseUrl,
     element: <App/>,
     children: [
       {

@@ -3,15 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NikolaYK2.github.io/home-harmony",
+  "homepage": "https://NikolaYK2.github.io/home-harmony/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build --sourcemap=false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
