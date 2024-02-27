@@ -30,7 +30,7 @@ export const DetailItem = () => {
           </div>
         </div>
 
-        <div>
+        <div className={s.describe}>
           <H2 title={item?.title}/>
         </div>
       </div>
