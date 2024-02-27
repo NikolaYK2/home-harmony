@@ -14,7 +14,7 @@ export type ItemsType = {
   sale: boolean,
   favorite: boolean,
 }
-type InitialStateType = {
+export type InitialStateType = {
   items: ItemsType[]
 }
 const initialState: InitialStateType = {

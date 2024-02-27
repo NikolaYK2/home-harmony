@@ -28,9 +28,9 @@ const dispatch = useAppDispatch();
 
       <div className={s.data}>
         <div>
-          <h2>
+          <a href={''}>
             {items.title}
-          </h2>
+          </a>
           <p>
             ${items.price}
           </p>
