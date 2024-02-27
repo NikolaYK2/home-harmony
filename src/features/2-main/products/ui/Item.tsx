@@ -29,9 +29,9 @@ const dispatch = useAppDispatch();
 
       <div className={s.data}>
         <div>
-          <a href={''}>
+          <Link to={`/item/${items.id}`}>
             {items.title}
-          </a>
+          </Link>
           <p>
             ${items.price}
           </p>

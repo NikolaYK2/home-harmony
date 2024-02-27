@@ -1,4 +1,6 @@
 .containH2 h2{
-  font-size: var(--font-size-56);
   text-transform: uppercase;
+}
+.large{
+  font-size: clamp(var(--font-size-25),5vw,var(--font-size-56));
 }
