@@ -21,24 +21,16 @@
   }
 
   .logo {
+    all: unset;
+    color: var(--color-darck-900);
+    font-size: var(--font-size-25);
 
-    > a {
+    &:hover {
+      all: unset;
       color: var(--color-darck-900);
       font-size: var(--font-size-25);
-    }
+      cursor: pointer;
 
-    > a:hover {
-      svg {
-        path:nth-child(1) {
-          fill: #56676f;
-          transition: fill .3s ease 0s;
-        }
-
-        path:nth-child(2) {
-          fill: #aa8a71;
-          transition: fill .3s ease 0s;
-        }
-      }
     }
   }
 

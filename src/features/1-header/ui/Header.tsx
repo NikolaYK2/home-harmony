@@ -21,13 +21,13 @@ export const Header = () => {
     <header className={s.header}>
       <div className={s.containerHeader}>
 
-        <div className={s.logo}>
-          <Button as={'a'} href={''}>
-            HOME HARMONY
-          </Button>
-        </div>
+        <Button as={'a'} className={s.logo}>
+          HOME HARMONY
+        </Button>
 
-        <nav className={`${s.nav} ${switchNav && s.navActive}`} onClick={() => {setSwitchNav(false)}}>
+        <nav className={`${s.nav} ${switchNav && s.navActive}`} onClick={() => {
+          setSwitchNav(false)
+        }}>
 
           <div className={`${s.items} ${switchNav && s.itemsActive}`} onClick={(event) => event.stopPropagation()}>
             <ul>
@@ -39,7 +39,7 @@ export const Header = () => {
               )}
             </ul>
 
-           <Messenger className={s.messengers}/>
+            <Messenger className={s.messengers}/>
 
           </div>
         </nav>

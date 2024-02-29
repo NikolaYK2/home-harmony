@@ -27,17 +27,16 @@
   background: var(--color-medium-opaciti);
   box-shadow: 0 1px 5px #f3f5ea;
 }
-.header .logo > a {
+.header .logo {
+  all: unset;
   color: var(--color-darck-900);
   font-size: var(--font-size-25);
 }
-.header .logo > a:hover svg path:nth-child(1) {
-  fill: #56676f;
-  transition: fill 0.3s ease 0s;
-}
-.header .logo > a:hover svg path:nth-child(2) {
-  fill: #aa8a71;
-  transition: fill 0.3s ease 0s;
+.header .logo:hover {
+  all: unset;
+  color: var(--color-darck-900);
+  font-size: var(--font-size-25);
+  cursor: pointer;
 }
 .header .nav {
   display: flex;
