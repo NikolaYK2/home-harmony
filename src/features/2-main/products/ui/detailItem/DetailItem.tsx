@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {itemSelectAutomatized} from "@/features/2-main/products/model/itemsSelectors.ts";
 import {useAppSelector} from "@/app/lib/hooks.ts";
 import s from './DetailItem.module.scss'
+import {Button} from "@/comon/components/btnPoly/Button.tsx";
 
 export const DetailItem = () => {
 
@@ -33,6 +34,7 @@ export const DetailItem = () => {
           <H2 title={item?.title} variantSize={'large'}/>
           <p>${item?.price}</p>
           <p>{item?.description}</p>
+          <Button variant={"primary"}>buy</Button>
         </div>
       </div>
 
